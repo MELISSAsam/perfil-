@@ -1,27 +1,60 @@
-#container {
-  text-align: center;
+/* ===============================
+   💙 Centrar todo al centro
+   =============================== */
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+/* Ion Content: centra todo vertical y horizontalmente */
+ion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* centra horizontal */
+  justify-content: center;  /* centra vertical */
+  min-height: 100vh;        /* asegura que ocupe toda la pantalla */
+  text-align: center;       /* centra el texto */
+  --background: #b3e5fc;   /* fondo de ejemplo */
+  padding: 1rem;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+/* Ion Card: centrado horizontal y sin margen */
+ion-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* transparente como en tu HTML */
+  border-radius: 0;
+  padding: 0;
+  margin: 0 auto; /* centrado horizontal */
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+/* Contenido de la tarjeta */
+ion-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 0;
 }
 
-#container a {
-  text-decoration: none;
+/* Imagen dentro de la tarjeta */
+ion-card-content img {
+  border-radius: 18px;
+  box-shadow: 0 4px 10px rgba(128, 128, 128, 0.5);
+  width: 100%;       /* se ajusta al contenedor */
+  max-width: 200px;  /* tamaño máximo opcional */
+  height: auto;
+}
+
+/* Párrafos */
+p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* Botón */
+ion-button {
+  max-width: 200px;       /* tamaño máximo */
+  margin-top: 1.5rem;
+  display: block;          /* asegura que se centre */
+  margin-left: auto;
+  margin-right: auto;
 }

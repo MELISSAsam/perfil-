@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Informacion de usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Perfil de Usuario</ion-card-title>  
+    <ion-card-content>
+      Actualizar informacion del usuario.
+    </ion-card-content>
+  </ion-card-header>
+  </ion-card >
+ <ion-input
+        label="Nombre"
+        labelPlacement="floating"
+        placeholder="Ingresa tu nombre"
+        [(ngModel)]="nombre"
+        clearInput>
+      </ion-input>
+
+        <ion-input
+        label="Correo"
+        labelPlacement="floating"
+        placeholder="Ingresa tu Correo"
+        [(ngModel)]="correo"
+        clearInput>
+      </ion-input>
+  
+
+      <ion-input 
+        label="Telefono"
+        labelPlacement="floating"
+        placeholder="Ingresa tu Telefono"
+        [(ngModel)]="telefono"
+        clearInput>
+      </ion-input>
+
+
+  <ion-button expand="full" color="success" routerLink="/home">
+    Guardar Cambios y Volver a Home
+  </ion-button>
+  
+</ion-content>
+
+
+     
+
