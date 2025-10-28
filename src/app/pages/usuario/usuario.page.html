@@ -5,17 +5,32 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Perfil de Usuario</ion-card-title>  
-    <ion-card-content>
-      Actualizar informacion del usuario.
-    </ion-card-content>
-  </ion-card-header>
-  </ion-card >
- <ion-input
-        label="Nombre"
-        labelPlacement="floating"
+ 
+  <ion-button id="open-modal" expand="block" color="secondary">
+    Editar Información de Usuario
+  </ion-button>
+  <p>{{ message }}</p>
+
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cancelar</ion-button>
+          </ion-buttons>
+          <ion-title>Editar Datos</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Guardar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      
+      <ion-content class="ion-padding">
+
+   <ion-input
+       label="Nombre"
+        labelPlacement="floating" 
         placeholder="Ingresa tu nombre"
         [(ngModel)]="nombre"
         clearInput>
@@ -30,13 +45,15 @@
       </ion-input>
   
 
-      <ion-input 
-        label="Telefono"
-        labelPlacement="floating"
-        placeholder="Ingresa tu Telefono"
-        [(ngModel)]="telefono"
-        clearInput>
-      </ion-input>
+     <ion-input
+  label="Contraseña"
+  label-placement="floating"
+  placeholder="Ingresa tu Contraseña"
+  type="password"
+  [(ngModel)]="password"
+  clearInput>
+  <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+</ion-input>
 
 
   <ion-button expand="full" color="success" routerLink="/home">
